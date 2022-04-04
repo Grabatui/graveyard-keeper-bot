@@ -1,0 +1,20 @@
+{
+  "name": "grabatui/grabeyard-keeper-bot",
+  "type": "project",
+  "require": {
+    "php": ">=8.0",
+    "irazasyed/telegram-bot-sdk": "^v3.4.1",
+    "php-di/php-di": "^6.3",
+    "vlucas/phpdotenv": "^5.4",
+    "doctrine/dbal": "^3.3",
+    "doctrine/migrations": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "GraveyardKeeperBot\\": "src/"
+    }
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^6.0"
+  }
+}
