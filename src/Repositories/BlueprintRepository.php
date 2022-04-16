@@ -13,6 +13,11 @@ class BlueprintRepository
     ) {
     }
 
+    /**
+     * @param string $searchString
+     * @param int $limit
+     * @return Blueprint[]
+     */
     public function search(string $searchString, int $limit = 3): array
     {
         $sql = <<<SQL
@@ -41,7 +46,7 @@ SQL;
             array_map(
                 static fn(array $rawResource): Resource => new Resource(
                     $rawResource['code'],
-                    (int)$rawResource['count']
+                    $rawResource['count']
                 ),
                 !empty($raw['resources']) ? json_decode($raw['resources'], true) : []
             ),

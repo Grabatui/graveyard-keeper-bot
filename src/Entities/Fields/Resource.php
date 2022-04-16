@@ -5,11 +5,11 @@ namespace GraveyardKeeperBot\Entities\Fields;
 class Resource
 {
     private string $code;
-    private int $count;
+    private string $count;
 
     public function __construct(
         string $code,
-        int $count
+        string $count
     ) {
         $this->code = $code;
         $this->count = $count;
@@ -20,7 +20,7 @@ class Resource
         return $this->code;
     }
 
-    public function getCount(): int
+    public function getCount(): string
     {
         return $this->count;
     }
